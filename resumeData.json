@@ -1,0 +1,184 @@
+{
+  "main": {
+    "name":"Mahmud Abdur Rahman",
+    "occupation":"Software Developer",
+    "description":"Peace be upon you. I'm a Python & PHP enthusiast from Bangladesh. I've been with the web development industry for over 4 years & successfully deployed numerous projects",
+    "image":"profilepic.jpg",
+    "bio":"Professional Python, PHP & Javascript developer specialized in Django framework from Python, Laravel framework from PHP & React. I've started my career with PHP since 2014 and mastered CodeIgniter, CakePHP, Laravel, Lumen etc. over the years & based on the projects I was working on. Developed my own MVC framework & CMS with PHP, you may find them on my Github account & use them for your own development. For some research works I started up with Python around 2017/18 & since then I'm in love with Python & it's libraries. Also started with React JS for frontend development for REST & GraphQL API integration. I love music, playing guitar & ukulele and travelling.",
+    "contactmessage":"If you think I can be of any help for you, please don't hesitate to contact me.",
+    "email": "xeroticinc@gmail.com",
+    "phone": "+8801705372348",
+    "address":{
+      "street":"36/3, Block-C, Banasree",
+      "city":"Dhaka",
+      "state":"Bangladesh",
+      "zip": "1215"
+    },
+    "website": "https://xeroticikot.github.io/gh-pages-with-react/",
+    "resumedownload":"https://xeroticikot.github.io/gh-pages-with-react/",
+    "social":[
+      {
+        "name":"facebook",
+        "url":"http://facebook.com/mahmudabdurrahman.toki",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"twitter",
+        "url":"http://twitter.com/xeroticikot",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"google-plus",
+        "url":"https://aboutme.google.com/u/2/?hl=en",
+        "className":"fa fa-google-plus"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/mahmud-abdur-rahman-toki-a3a08158",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"instagram",
+        "url":"http://instagram.com/xeroticikot",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"github",
+        "url":"http://github.com/xeroticikot",
+        "className":"fa fa-github"
+      },
+      {
+        "name":"skype",
+        "url":"http://skype.com",
+        "className":"fa fa-skype"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
+    "education":[
+      {
+        "school":"University of Liberal Arts Bangladesh",
+        "degree":"Bachelor in Computer Science & Engineering",
+        "graduated":"Dec, 2016",
+        "description":"Graduated in Computer Science & Engineering of 4 years course, but for me it took 6 years as I was not very attentive in academic."
+      }
+    ],
+    "work":[
+      {
+        "company":"Eunoia IT Solutions",
+        "title":"Lead Software Developer",
+        "years":"Sept. 2016 - March 2019",
+        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      },
+      {
+        "company":"Experts Consortium Ltd.",
+        "title":"Senior Software Engineer",
+        "years":"April 2019 - Dec. 2019",
+        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      },
+      {
+        "company":"CodeLinker",
+        "title":"Team Lead & Q/A Engineer",
+        "years":"Jan 2015 - Present",
+        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      }
+    ],
+    "skills":[
+      {
+        "name":"Git",
+        "level":"60%"
+      },
+      {
+        "name":"Python",
+        "level":"55%"
+      },
+      {
+        "name":"PHP",
+        "level":"75%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"50%"
+      },
+      {
+        "name":"CSS",
+        "level":"30%"
+      },
+      {
+        "name":"HTML5",
+        "level":"90%"
+      },
+      {
+        "name":"VueJs",
+        "level":"50%"
+      },
+      {
+        "name":"MySQL/PostgreSQL",
+        "level":"80%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Eejara",
+        "category":"Heavy machinery renting platform for Bangladesh",
+        "image":"eejara.jpg",
+        "url":"https://eejara.com"
+      },
+      {
+        "title":"Parking Kori",
+        "category":"Parking service using mobile apps.",
+        "image":"parkingkori.jpg",
+        "url":"https://parkingkori.com"
+      },
+      {
+        "title":"Get Wobo",
+        "category":"Ride sharing service in Malaysia.",
+        "image":"getwobo.jpg",
+        "url":"#"
+      },
+      {
+        "title":"Got Guide",
+        "category":"Tour guide search & hiring platform in Malaysia.",
+        "image":"gotguide.jpg",
+        "url":"#"
+      },
+      {
+        "title":"Jibon Bachai",
+        "category":"Blood donation web app based on Bangladesh",
+        "image":"jibonbachai.png",
+        "url":"https://jibonbachai.herokuapp.com"
+      },
+      {
+        "title":"Hamptons Boat Rental",
+        "category":"Boat rental service around New York city",
+        "image":"hamptonsboatrental.png",
+        "url":"https://www.hamptonsboatrental.com"
+      },
+      {
+        "title":"The Credit Coach",
+        "category":"Financial Consultency & loan company in New York city.",
+        "image":"thecreditcoach-org.png",
+        "url":"https://www.thecreditcoach.org"
+      }
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"He released the two seas, meeting [side by site]\nBetween them is a barrier [so] neither of them transgresses",
+        "user":"Quran 55 : 19-20"
+      },
+      {
+        "text":"Do they not see the birds controlled in the atmosphere of the sky? none holds them up except Allah. Indeed in that are signs for a people who believe.",
+        "user":"Quran (16:79)"
+      },
+      {
+        "text": "So be patient. Indeed, the promise of ALLAH is truth",
+        "user": "Quran 30:60"
+      }
+    ]
+  }
+}
