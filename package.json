@@ -1,8 +1,8 @@
 {
-  "name": "gh-pages-with-react",
+  "name": "xeroticikot.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://xeroticikot.github.io/gh-pages-with-react",
+  "homepage": "https://xeroticikot.github.io",
   "dependencies": {
     "jquery": "^3.4.1",
     "react": "^15.5.4",
