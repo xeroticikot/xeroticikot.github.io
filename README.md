@@ -1,150 +1,314 @@
-# Deploying a React App* to GitHub Pages
+# Integrating TailwindCSS & Shadcn/UI with Docusaurus
 
-\* created using `create-react-app`
+This project demonstrates how to integrate TailwindCSS and Shadcn/UI with Docusaurus V3, creating a modern documentation website with beautiful, accessible UI components. Perfect for technical documentation, blogs, and project websites.
 
-# Introduction
+[**View Demo →**](https://docusaurus-tailwind-shadcn-template.netlify.app)
 
-In this tutorial, I'll show you how I deployed a React app—which I created using `create-react-app`—to GitHub Pages.
+## Technology Stack
 
-You can visit the deployed app, at [https://gitname.github.io/react-gh-pages/](https://gitname.github.io/react-gh-pages/).
+- ⚡️ Docusaurus V3
+- 🎨 TailwindCSS for styling (Support v3 and v4)
+- 🧩 Shadcn/UI components
+- 🔍 `@easyops-cn/docusaurus-search-local` for search functionality
+- 📱 Fully responsive design
+- 🌗 Light/dark mode support
 
-This repository contains the files related to the app. The `master` branch contains the app's source code (the code the app's developers edit), and the `gh-pages` branch contains a *built* version of the app (i.e. the code that GitHub Pages serves to the app's visitors).
+## Key Features
 
-The remainder of this document contains a tutorial on creating a React app (using `create-react-app`) and deploying that app to GitHub Pages.
+- **Modern Component Library**: Shadcn/UI integration provides beautiful, accessible components
+- **Customizable Styling**: TailwindCSS enables rapid styling and customization
+- **Full-Text Search**: Local search functionality powered by @easyops-cn/docusaurus-search-local
+- **Dark Mode**: Seamless dark mode support with Docusaurus and Shadcn/UI
+- **Performance Optimized**: Built with performance best practices
 
-# Tutorial
+The website also features a new blog UI was built using TailwindCSS & Shadcn/UI components and provides a modern, clean interface for displaying blog posts. The blog posts are managed by a custom blog plugin, defined in `src/plugins/blog-plugin.js` and homepage config in `components/Homepage/index.js`.
 
-## Prerequisites
+## Quick Start
 
-1. An adequate version of [`Node.js`](https://nodejs.org/) is installed. Here's the adequate version I use:
+- To use this template (docs/blog) with Tailwind v3, switch to the `feature/docusaurus-tailwind-v3` branch.
 
-    ```sh
-    $ node --version
-    v6.10.1
-    ```
+```bash
+git clone -b feature/docusaurus-tailwind-v3 https://github.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template.git
+```
 
-2. An adequate version of  [`npm`](https://nodejs.org/) is installed. Here's the adequate version I use:
+- To use this template (docs, api docs and blog) with Tailwind v3, switch to the `feature/docusaurus-tailwind-v3-openapi-docs` branch.
 
-    ```sh
-    $ npm --version
-    3.10.10
-    ```
-3. An adequate version of [`create-react-app`](https://github.com/facebookincubator/create-react-app) is installed. Here's the adequate version I use:
+```bash
+git clone -b feature/docusaurus-tailwind-v3-openapi-docs https://github.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template.git
+```
 
-    ```sh
-    $ create-react-app --version
-    1.3.1
-    ```
+- To use this template (docs/blog) with Tailwind v4, switch to the `feature/docusaurus-tailwind-v4` branch.
 
-    In the case of `create-react-app`, you can either install it globally (i.e. `$ npm install -g create-react-app`) or install it locally (i.e. `$ npm install create-react-app`). If you choose the latter, you will have to specify its path whenever you invoke it (e.g. `path/to/node_modules/.bin/create-react-app`).
+```bash
+git clone -b feature/docusaurus-tailwind-v4 https://github.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template.git
+```
 
-4. (**Optional**) An adequate version of [`sed`](http://www.gnu.org/software/sed/) is installed. Here's the adequate version I use:
+- To use this template (docs, api docs and blog) with Tailwind v4, use `main` branch or switch to the `feature/docusaurus-tailwind-v4-openapi-docs` branch.
 
-   ```sh
-   $ sed --version
-   sed (GNU sed) 4.4
-   ```
+```bash
+git clone -b feature/docusaurus-tailwind-v4-openapi-docs https://github.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template.git
+```
 
-5. A [GitHub](https://www.github.com) account. :octocat:
+## Deployments
 
-6. A command-line Git client [setup according to GitHub](https://help.github.com/articles/set-up-git/).
+### Vercel
 
-## Procedure
+You can get started by creating your own Docusaurus website and deploy to Vercel by clicking the link:
 
-1. **Create an *empty* repository on GitHub.** (2 minutes)
+[![clone](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fnamnguyenthanhwork%2Fdocusaurus-tailwind-shadcn-template&showOptionalTeamCreation=false)
 
-    * For this tutorial, I'll create a repository named `react-gh-pages`.
-    * By *empty*, I mean *without* a `README.md` file, a `.gitignore` file, a `LICENSE` file, or any other files.
+Vercel will copy the [Docusaurus TailwindCSS Shadcn/ui](https://github.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template) and deploy the website for you. Once completed, every commit in the repo will be deployed automatically.
 
-2. **Create a new React app on your computer.** (5 minutes)
+### Cloudflare Pages
 
-    ```sh
-    $ create-react-app react-gh-pages
-    ```
-    
-    * This is the app you will deploy to GitHub Pages in step 7.
-    * I opted to give the app the same name as my GitHub repository (i.e. `react-gh-pages`). However, you can name them differently from one another (e.g. you can name your app `app-123` and your GitHub Repository `repo-456`).
-    * This will create a new folder named `react-gh-pages` (or whatever you named your app) on your computer.
+Go to the platform of your choice and follow the instructions to deploy a new site from a Git repository.
 
-3. **Install the `gh-pages` package as a "dev-dependency" of the app.** (1 minute)
+Notice: Use yarn instead of npm for Cloudflare Pages.
 
-    ```
-    $ cd react-gh-pages
-    $ npm install gh-pages --save-dev
-    ```
-    
-    * The commands shown in the following steps can all be issued from within the app's folder.
+### Netlify and Others
 
-4. **Add some properties to the app's `package.json` file.** (3 minutes)
+Go to the platform of your choice and follow the instructions to deploy a new site from a Git repository.
 
-    * At the top level, add a `homepage` property. Define its value to be the string `http://{username}.github.io/{repo-name}`, where `{username}` is your GitHub username, and `{repo-name}` is the name of the GitHub repository you created in step 1. Since my GitHub username is `gitname` and the name of my GitHub repository is `react-gh-pages`, I added the following property:
-    
-    ```js
-    //...
-    "homepage": "http://gitname.github.io/react-gh-pages"
-    ```
-    
-    * In the existing `scripts` property, add a `predeploy` property and a `deploy` property, each having the values shown below:
+## Local Development
 
-    ```js
-    "scripts": {
-      //...
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d build"
+1. Clone the repository:
+
+```bash
+git clone https://github.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template.git
+cd docusaurus-tailwind-shadcn-template
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm start
+```
+
+4. Build for production:
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```bash
+docusaurus-tailwind-shadcn-template/
+├── blog/
+├── docs/
+├── src/
+│   ├── components/
+│   │   └── ui/           # Shadcn/UI components
+│   ├── css/
+│   │   └── custom.css    # TailwindCSS config and custom styles
+│   ├── lib/
+│   │   └── utils.ts      # Utility functions
+│   ├── pages/            # React pages
+│   ├── plugins/          # Docusaurus plugins
+│   └── theme/            # Docusaurus theme customization
+├── static/               # Static assets
+├── tailwind.config.js    # TailwindCSS configuration (if using v3, removed in v4)
+├── postcss.config.js     # PostCSS configuration
+└── docusaurus.config.js  # Docusaurus configuration
+```
+
+## Configuration
+
+### TailwindCSS Setup
+
+The project includes a custom TailwindCSS configuration optimized for Docusaurus:
+
+In v3, you can customize the TailwindCSS configuration in `tailwind.config.js`.
+
+```javascript
+// tailwind.config.js
+module.exports = {
+  corePlugins: {
+    preflight: false
+  },
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    './docs/**/*.{js,jsx,ts,tsx}',
+    './blog/**/*.{js,jsx,ts,tsx}'
+  ],
+  darkMode: ['class', '[data-theme="dark"]'] // Support Docusaurus dark mode
+  // ... rest of the configuration
+}
+```
+
+In v4, you can customize the TailwindCSS configuration in `custom.css`. The `tailwind.config.js` file is removed in v4.
+
+Read more about [TailwindCSS v4](https://tailwindcss.com/blog/tailwindcss-v4).
+
+### Shadcn/UI Components
+
+All Shadcn/UI components are located in `src/components/ui/`. To use a component:
+
+```tsx
+import { Button } from '@/components/ui/button'
+
+function MyComponent() {
+  return <Button variant='outline'>Click me</Button>
+}
+```
+
+**Note:** Because Docusaurus doesn't support CLI installation for Shadcn/UI, you'll need to manually copy the components and adjust the import paths.
+
+### Alias Configuration
+
+This project includes configured path aliases to simplify imports and improve code organization. The aliases are set up in two places:
+
+#### 1. JSConfig Configuration (`jsconfig.json`)
+
+The `jsconfig.json` file provides TypeScript-like path mapping for better IDE support and IntelliSense:
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@css/*": ["src/css/*"],
+      "@lib/*": ["src/lib/*"],
+      "@pages/*": ["src/pages/*"],
+      "@plugins/*": ["src/plugins/*"],
+      "@theme/*": ["src/theme/*"]
     }
-    ```
-    
-    * **Shortcut:** Instead of adding those properties using a text editor; if I have `sed` installed on my system, I can add the properties by issuing the following shell commands:
-    
-    ```sh
-    $ sed -i '5i\  "homepage": "http://gitname.github.io/react-gh-pages",' ./package.json
-    $ sed -i '15i\    "predeploy": "npm run build",' ./package.json
-    $ sed -i '16i\    "deploy": "gh-pages -d build",' ./package.json
-    ```
-    
-5. **Create a git repository in the app's folder.** (1 minute)
+  }
+}
+```
 
-    ```
-    $ git init
-    Initialized empty Git repository in C:/path/to/react-gh-pages/.git/
-    ```
+#### 2. Webpack Alias Configuration (`src/plugins/webpack-alias.js`)
 
-6. **Add the GitHub repository as a "remote" in your local git repository.** (1 minute)
+The webpack alias plugin ensures that these paths work at build time:
 
-    ```
-    $ git remote add origin https://github.com/gitname/react-gh-pages.git
-    ```
-    
-    * This will make it so the `gh-pages` package knows where you want it to deploy your app in step 7.
-    * It will also make it so git knows where you want it to push your source code (i.e. the commits on your `master` branch) in step 8.
+```javascript
+const path = require('path')
 
-7. **Generate a *production build* of your app, and deploy it to GitHub Pages.** (2 minutes)
+module.exports = function () {
+  return {
+    name: 'webpack-alias-plugin',
+    configureWebpack() {
+      return {
+        resolve: {
+          alias: {
+            '@': path.resolve(__dirname, '../'),
+            '@components': path.resolve(__dirname, '../components'),
+            '@css': path.resolve(__dirname, '../css'),
+            '@lib': path.resolve(__dirname, '../lib'),
+            '@pages': path.resolve(__dirname, '../pages'),
+            '@plugins': path.resolve(__dirname, '../plugins'),
+            '@theme': path.resolve(__dirname, '../theme')
+          }
+        }
+      }
+    }
+  }
+}
+```
 
-    ```
-    $ npm run deploy
-    ```
-    
-    * That's it! Your app is now accessible at the URL you specified in step 4.
-    * In my case, my app is now accessible at: https://gitname.github.io/react-gh-pages/
-    * I recommend exploring the GitHub repository at this point. When I explored it, I noticed that, although a `master` branch did not exist, a `gh-pages` branch did exist. I noticed the latter contained the *built* app code, as opposed to the app's source code.
+#### Usage Examples
 
-8. **Optionally, commit your source code to the "master" branch and push your commit to GitHub.** (1 minute)
+With these aliases, you can use cleaner import statements:
 
-    ```
-    $ git add .
-    $ git commit -m "Create a React app and publish it to GitHub Pages"
-    $ git push origin master
-    ```
+```tsx
+// Instead of relative imports like this:
+import { Button } from '../../../components/ui/button'
+import { cn } from '../../../lib/utils'
 
-    * I recommend exploring the GitHub repository once again at this point. When I did that, I noticed that a `master` branch now existed, and it contained the app's source code.
-    * So, the `master` branch held the source code, and the `gh-pages` branch held the *built* app code.
+// You can use alias imports:
+import { Button } from '@components/ui/button'
+import { cn } from '@lib/utils'
+```
 
-# References
+### Search Configuration
 
-1. [Facebook's tutorial on deploying a React app to GitHub Pages](https://facebook.github.io/create-react-app/docs/deployment#github-pages-https-pagesgithubcom)
+The local search is configured in `docusaurus.config.js`:
 
-# Notes
+```javascript
+themes: [
+  [
+    require.resolve('@easyops-cn/docusaurus-search-local'),
+    {
+      indexPages: true,
+      docsRouteBasePath: '/docs',
+      hashed: true,
+      language: ['en'],
+      highlightSearchTermsOnTargetPage: false,
+      searchResultContextMaxLength: 50,
+      searchResultLimits: 8,
+      searchBarShortcut: true,
+      searchBarShortcutHint: true
+    }
+  ]
+],
+```
 
-* I created this React app using [`create-react-app`](https://github.com/facebookincubator/create-react-app). By default, apps created using `create-react-app` have a README.md file that looks like [this](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md). Indeed, the README.md file you're now reading originally looked like that. I have since changed it to look the way it looks today.
-* Special thanks to GitHub, Inc., for providing us with the GitHub Pages hosting functionality at no extra charge.
-* And now, time to turn the default `create-react-app` app into something unique!
+## Customization
+
+### Theming
+
+1. Modify colors in `tailwind.config.js` (v3) or `src/css/custom.css` (v4)
+2. Update CSS variables in `src/css/custom.css`
+3. Customize Shadcn/UI components in `src/components/ui/`
+
+### Adding New Components
+
+1. Create component in `src/components/ui/` or `src/components/`
+2. Import and use in your pages/docs
+
+Example:
+
+```tsx
+// src/components/ui/custom-button.tsx
+import { Button } from '@/components/ui/button'
+
+export function CustomButton({ children }) {
+  return <Button className='custom-styles'>{children}</Button>
+}
+```
+
+## Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit changes: `git commit -m 'Add amazing feature'`
+4. Push to branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+## Support
+
+- 📚 [Docusaurus Documentation](https://docusaurus.io/)
+- 🎨 [Shadcn/UI Documentation](https://ui.shadcn.com/)
+- 🌈 [TailwindCSS Documentation](https://tailwindcss.com/)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Built with ♥ by [namnguyenthanhwork]
+
+## Buy me a coffee
+
+If you find this project helpful, you can buy me a coffee:
+
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-Donate-FF813F.svg)](https://buymeacoffee.com/thanhnamnguyen)
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here. [🙏 Become a sponsor via Buy me a coffee](https://buymeacoffee.com/thanhnamnguyen)
+
+<a href="https://github.com/fthobe" target="_blank"><img src="https://avatars.githubusercontent.com/u/579379" alt="fthobe" width="64px" height="64px" style="border-radius: 50%;" /></a>
+
+## Template similar
+
+- [Docusaurus Material UI Template](https://github.com/namnguyenthanhwork/docusaurus-material-ui-template)

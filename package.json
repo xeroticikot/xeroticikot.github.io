@@ -1,36 +1,68 @@
 {
   "name": "xeroticikot.github.io",
-  "version": "0.1.0",
+  "description": "Software Engineer specialized in python, javascript, rust etc.",
+  "author": "Mahmud Abdur Rahman",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xeroticikot/xeroticikot.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com//xeroticikot/xeroticikot.github.io/issues"
+  },
+  "homepage": "https://github.com/xeroticikot/xeroticikot.github.io",
+  "version": "1.0.0",
   "private": true,
-  "homepage": "https://xeroticikot.github.io",
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids"
+  },
   "dependencies": {
-    "jquery": "^3.4.1",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-ga": "^2.7.0"
+    "@docusaurus/core": "^3.9.2",
+    "@docusaurus/faster": "^3.9.2",
+    "@docusaurus/plugin-ideal-image": "^3.9.2",
+    "@docusaurus/preset-classic": "^3.9.2",
+    "@docusaurus/remark-plugin-npm2yarn": "^3.9.2",
+    "@easyops-cn/docusaurus-search-local": "^0.52.1",
+    "@mdx-js/react": "^3.1.1",
+    "@radix-ui/react-avatar": "^1.1.11",
+    "@radix-ui/react-slot": "^1.2.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.555.0",
+    "prism-react-renderer": "^2.4.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "gh-pages": "^1.0.0",
-    "react-scripts": "^3.3.0"
+    "@docusaurus/module-type-aliases": "^3.9.2",
+    "@docusaurus/types": "^3.9.2",
+    "@tailwindcss/postcss": "^4.1.17",
+    "postcss": "^8.5.6",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss": "^4.1.17",
+    "tailwindcss-animate": "^1.0.7"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+  "engines": {
+    "node": ">=20.0"
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      ">0.5%",
       "not dead",
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
     ]
   }
 }
