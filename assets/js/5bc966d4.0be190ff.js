@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkxeroticikot_github_io=self.webpackChunkxeroticikot_github_io||[]).push([["8023"],{1487:function(t){t.exports=JSON.parse('{"blogTitle":"Blog","blogDescription":"Blog description is here ...","path":"blog","totalPosts":6,"totalRecentPosts":6}')}}]);

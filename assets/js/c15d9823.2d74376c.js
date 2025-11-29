@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkxeroticikot_github_io=self.webpackChunkxeroticikot_github_io||[]).push([["6431"],{2402:function(t){t.exports=JSON.parse('{"metadata":{"permalink":"/blog","page":1,"postsPerPage":6,"totalPages":1,"totalCount":6,"blogDescription":"Blog description is here ...","blogTitle":"Blog"}}')}}]);
