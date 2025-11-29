@@ -23,7 +23,8 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'xeroticikot', // Usually your GitHub org/user name.
-  projectName: 'docusaurus-tailwind-shadcn-template', // Usually your repo name.
+  projectName: 'xeroticikot.github.io', // Usually your repo name.
+  deploymentBranch: 'master',
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
